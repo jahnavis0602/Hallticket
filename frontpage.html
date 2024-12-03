@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hall Ticket Automation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url("https://via.placeholder.com/1600x900?text=Hall+Ticket+Background+with+QR+Code") no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+        }
+        .overlay {
+            background-color: rgba(0, 0, 0, 0.7); /* Dark overlay for readability */
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+        .header {
+            background-color: rgba(244, 143, 177, 0.9);
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        .nav-buttons {
+            display: flex;
+            gap: 15px;
+        }
+        .nav-buttons a {
+            text-decoration: none;
+            color: white;
+            background-color: rgba(236, 64, 122, 0.9);
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .nav-buttons a:hover {
+            background-color: rgba(233, 30, 99, 0.9);
+        }
+        .content {
+            text-align: center;
+            padding: 50px;
+            position: relative;
+            z-index: 2;
+        }
+        .content h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            text-shadow: 1px 1px 4px rgba(183, 15, 15, 0.8);
+        }
+        .content p {
+            font-size: 18px;
+            color: #ddd;
+            line-height: 1.8;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+        }
+        marquee {
+            color: #ffccbc;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        @media (max-width: 768px) {
+            .content h2 {
+                font-size: 28px;
+            }
+            .content p {
+                font-size: 16px;
+            }
+            .nav-buttons {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay"></div>
+    <div class="header">
+        <h1>Hall Ticket Automation</h1>
+        <div class="nav-buttons">
+            <a href="#">Home</a>
+            <a href="{{ url_for('login') }}">Login</a>
+        </div>
+    </div>
+    <div class="content">
+        <marquee><h2>Hall Ticket Automation with Integrated QR Codes</h2></marquee>
+        <p>Streamlining hall ticket generation and verification with QR code technology.</p>
+        <p>The Hall Ticket Generator with Integrated QR Code project aims to streamline the process of generating and verifying hall tickets for students, ensuring accuracy and efficiency. By incorporating QR codes, each hall ticket can be easily scanned for validation, reducing the chances of errors during exam check-ins. The system allows admins to upload student data, generate hall tickets in PDF format, and download or print them, with embedded QR codes containing essential student and exam information. The backend is powered by Python and Flask, and data is securely stored in MySQL, providing a reliable platform for managing student records.</p>
+    </div>
+</body>
+</html>
